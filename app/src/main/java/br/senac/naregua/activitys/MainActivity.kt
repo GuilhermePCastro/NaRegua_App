@@ -20,4 +20,5 @@ class MainActivity : AppCompatActivity() {
             .replace(R.id.containerPrincipal, ListaBarbeariasFragment())
             .addToBackStack("fragListaBarbearia").commit()
     }
+
 }

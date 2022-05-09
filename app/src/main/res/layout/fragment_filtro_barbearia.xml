@@ -45,6 +45,7 @@
                 android:layout_marginTop="8dp"
                 android:ems="10"
                 android:inputType="textPersonName"
+                android:minHeight="48dp"
                 android:text="Nome da Barbearia" />
 
             <EditText
@@ -54,6 +55,7 @@
                 android:layout_marginTop="8dp"
                 android:ems="10"
                 android:inputType="textPersonName"
+                android:minHeight="48dp"
                 android:text="Bairro" />
 
             <LinearLayout
@@ -67,6 +69,7 @@
                     android:layout_marginTop="8dp"
                     android:ems="10"
                     android:inputType="textPersonName"
+                    android:minHeight="48dp"
                     android:text="Cidade" />
 
                 <EditText
@@ -77,6 +80,7 @@
                     android:layout_weight="1"
                     android:ems="10"
                     android:inputType="textPersonName"
+                    android:minHeight="48dp"
                     android:text="UF" />
 
             </LinearLayout>

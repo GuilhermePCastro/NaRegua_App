@@ -5,8 +5,11 @@
     android:id="@+id/cardListaBarbearia"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="16dp"
-    android:layout_marginBottom="32dp">
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginBottom="10dp"
+    app:cardUseCompatPadding="true">
 
     <LinearLayout
         android:id="@+id/layoutPrincipal"
@@ -38,6 +41,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
                     android:layout_marginBottom="8dp"
                     android:text="Barbearia do Gilson"
                     android:textAllCaps="true"
@@ -52,7 +56,7 @@
 
                 <TextView
                     android:id="@+id/txtEndereco"
-                    android:layout_width="236dp"
+                    android:layout_width="218dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
                     android:text="Av. Teotonio Vilela, 25"
@@ -104,7 +108,8 @@
             <TableRow
                 android:id="@+id/row6"
                 android:layout_width="80dp"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -113,24 +118,16 @@
 
                     <Button
                         android:id="@+id/btnDetalhes"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:layout_marginLeft="8dp"
                         android:layout_marginTop="4dp"
                         android:text="+ Detalhes"
                         android:textColor="@color/preto1"
-                        android:textSize="12sp"
+                        android:textSize="14sp"
                         android:textStyle="bold"
                         app:iconPadding="4dp"
                         app:iconTint="@color/preto1" />
-
-                    <ImageView
-                        android:id="@+id/imgZap"
-                        android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:layout_marginLeft="64dp"
-                        android:layout_weight="1"
-                        app:srcCompat="@drawable/whatsapp" />
 
                 </LinearLayout>
 
