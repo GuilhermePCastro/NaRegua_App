@@ -19,6 +19,12 @@ import com.squareup.picasso.Picasso
 import retrofit2.Call
 import retrofit2.Response
 
+private var NOME = " "
+private var CIDADE = " "
+private var UF = " "
+private var BAIRRO = " "
+
+
 class ListaBarbeariasFragment : Fragment() {
 
     lateinit var  binding: FragmentListaBarbeariasBinding
@@ -47,11 +53,24 @@ class ListaBarbeariasFragment : Fragment() {
 
         atualizaBarbearias()
 
+        binding.btnFiltar.setOnClickListener {
+
+            containerFrag?.let {
+                parentFragmentManager.beginTransaction().replace(it.id, FiltroBarbeariaFragment()).addToBackStack("Filtro").commit()
+            }
+
+        }
+
         return binding.root
     }
 
     override fun onResume(){
         super.onResume()
+
+        NOME = " "
+        CIDADE = " "
+        UF = " "
+        BAIRRO = " "
 
         atualizaBarbearias()
     }
@@ -80,7 +99,7 @@ class ListaBarbeariasFragment : Fragment() {
             }
 
         }
-        API(ctx).barbearia.index().enqueue(callback)
+        API(ctx).barbearia.filtro(NOME, CIDADE, UF, BAIRRO).enqueue(callback)
         CarregaOn()
 
     }
@@ -136,6 +155,18 @@ class ListaBarbeariasFragment : Fragment() {
         binding.swipere.isRefreshing        = false
     }
 
+    companion object{
+        @JvmStatic
+        fun newInstance(nome: String, cidade: String, uf: String, bairro: String) =
+            ListaBarbeariasFragment().apply {
+                arguments = Bundle().apply {
+                    NOME = nome
+                    CIDADE = cidade
+                    UF = uf
+                    BAIRRO = bairro
+                }
+            }
+    }
 
 
 

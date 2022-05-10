@@ -44,9 +44,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:ems="10"
+                android:hint="Nome da Barbearia"
                 android:inputType="textPersonName"
-                android:minHeight="48dp"
-                android:text="Nome da Barbearia" />
+                android:minHeight="48dp" />
 
             <EditText
                 android:id="@+id/edtBairro"
@@ -54,9 +54,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:ems="10"
+                android:hint="Bairro"
                 android:inputType="textPersonName"
-                android:minHeight="48dp"
-                android:text="Bairro" />
+                android:minHeight="48dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -68,9 +68,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:ems="10"
+                    android:hint="Cidade"
                     android:inputType="textPersonName"
-                    android:minHeight="48dp"
-                    android:text="Cidade" />
+                    android:minHeight="48dp" />
 
                 <EditText
                     android:id="@+id/edtUF"
@@ -79,9 +79,9 @@
                     android:layout_marginTop="8dp"
                     android:layout_weight="1"
                     android:ems="10"
+                    android:hint="UF"
                     android:inputType="textPersonName"
-                    android:minHeight="48dp"
-                    android:text="UF" />
+                    android:minHeight="48dp" />
 
             </LinearLayout>
 
@@ -89,8 +89,9 @@
                 android:id="@+id/btnBuscar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="230dp"
+                android:layout_gravity="right"
                 android:layout_marginTop="64dp"
+                android:gravity="end"
                 android:text="Buscar"
                 android:textColor="@color/preto1"
                 android:textSize="18sp"

@@ -40,6 +40,7 @@ class PerfilBarbeariaFragment : Fragment() {
         arguments?.let {
             barbId = it.getInt(BARBEARIA_ID)
         }
+
     }
 
     override fun onCreateView(
