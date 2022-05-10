@@ -100,3 +100,11 @@ fun trataCel(numero: String): String {
     return string
 }
 
+fun trataEnd(end: String): String {
+
+    var string: String
+    string = end.replace(" ","+")
+
+    return string
+}
+

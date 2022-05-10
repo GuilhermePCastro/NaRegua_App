@@ -18,7 +18,9 @@ import retrofit2.Callback
 import retrofit2.Response
 import android.content.Intent
 import android.net.Uri
+import br.senac.naregua.functions.montaShimmerPicaso
 import br.senac.naregua.functions.trataCel
+import br.senac.naregua.functions.trataEnd
 
 
 private const val BARBEARIA_ID = "id"
@@ -107,9 +109,29 @@ class PerfilBarbeariaFragment : Fragment() {
             }
 
             val celular = it.ds_celular
+            val endereco = it.ds_endereco + ", " + it.ds_numero
+
+            //Montando o shimmer para o picaso usar
+            var sDrawable = montaShimmerPicaso()
+
+            if(it.hx_logo.isNotEmpty()){
+                Picasso.get()
+                    .load(it.hx_logo)
+                    .placeholder(sDrawable)
+                    .error(R.drawable.no_imagem)
+                    .into(binding.imgBarbeariaPerfil)
+            }
+
 
             binding.btnWhats.setOnClickListener {
                 val url = "https://api.whatsapp.com/send?phone=55" + trataCel(celular)
+                val i = Intent(Intent.ACTION_VIEW)
+                i.data = Uri.parse(url)
+                startActivity(i)
+            }
+
+            binding.btnMaps.setOnClickListener {
+                val url = "https://www.google.com.br/maps/place/" + trataEnd(endereco)
                 val i = Intent(Intent.ACTION_VIEW)
                 i.data = Uri.parse(url)
                 startActivity(i)

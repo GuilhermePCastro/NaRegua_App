@@ -59,8 +59,9 @@
 
             <ImageView
                 android:id="@+id/imgBarbeariaPerfil"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_marginLeft="65dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="8dp"
                 tools:src="@tools:sample/avatars" />
@@ -80,8 +81,7 @@
                 android:id="@+id/divider2"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@color/amarelo2"
-                />
+                android:background="@color/amarelo2" />
 
             <TextView
                 android:id="@+id/txtEnderecoPerfil"
@@ -131,7 +131,7 @@
                 android:id="@+id/divider"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@color/amarelo2"/>
+                android:background="@color/amarelo2" />
 
             <TextView
                 android:id="@+id/txtComplemento"
@@ -176,20 +176,33 @@
                 android:textColor="@color/preto1"
                 android:textSize="16sp" />
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp">
+
+                <ImageButton
+                    android:id="@+id/btnWhats"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="#00FFFFFF"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/whatsapp" />
+
+                <ImageButton
+                    android:id="@+id/btnMaps"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="16dp"
+                    android:background="#00FFFFFF"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/mapas_do_google" />
+            </LinearLayout>
+
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
-
-    <ImageButton
-        android:id="@+id/btnWhats"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        android:background="#00FFFFFF"
-        android:scaleType="centerInside"
-        android:src="@drawable/whatsapp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

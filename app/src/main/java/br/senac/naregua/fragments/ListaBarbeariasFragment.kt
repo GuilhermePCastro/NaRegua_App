@@ -7,12 +7,15 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import br.senac.naregua.R
 import br.senac.naregua.api.API
 import br.senac.naregua.databinding.CardlistabarbeariaBinding
 import retrofit2.Callback
 import br.senac.naregua.databinding.FragmentListaBarbeariasBinding
+import br.senac.naregua.functions.montaShimmerPicaso
 import br.senac.naregua.functions.msg
 import br.senac.naregua.model.Barbearia
+import com.squareup.picasso.Picasso
 import retrofit2.Call
 import retrofit2.Response
 
@@ -95,6 +98,17 @@ class ListaBarbeariasFragment : Fragment() {
             cardBinding.txtBairro.text          = it.ds_bairro
             cardBinding.txtCep.text             = "CEP " + it.ds_cep
             cardBinding.txtCidade.text          = it.ds_cidade + " - " + it.ds_uf
+
+            //Montando o shimmer para o picaso usar
+            var sDrawable = montaShimmerPicaso()
+
+            if(it.hx_logo.isNotEmpty()){
+                Picasso.get()
+                    .load(it.hx_logo)
+                    .placeholder(sDrawable)
+                    .error(R.drawable.no_imagem)
+                    .into(cardBinding.imgBarbearia)
+            }
 
             var barbeariaId = it.id
 
