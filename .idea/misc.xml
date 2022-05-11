@@ -8,10 +8,11 @@
         <entry key="..\:/Android/NaRegua/app/src/main/res/layout/cardlistaShimmer.xml" value="0.22" />
         <entry key="..\:/Android/NaRegua/app/src/main/res/layout/cardlistabarbearia.xml" value="0.33" />
         <entry key="..\:/Android/NaRegua/app/src/main/res/layout/cardlistashimmerbarb.xml" value="0.20416666666666666" />
-        <entry key="..\:/Android/NaRegua/app/src/main/res/layout/fragment_filtro_barbearia.xml" value="0.22" />
+        <entry key="..\:/Android/NaRegua/app/src/main/res/layout/fragment_filtro_barbearia.xml" value="0.5" />
         <entry key="..\:/Android/NaRegua/app/src/main/res/layout/fragment_lista_barbearias.xml" value="0.25" />
         <entry key="..\:/Android/NaRegua/app/src/main/res/layout/fragment_perfil_barbearia.xml" value="0.25" />
         <entry key="..\:/Android/NaRegua/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2203125" />
+        <entry key="..\:/Android/NaRegua/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.2203125" />
       </map>
     </option>
   </component>

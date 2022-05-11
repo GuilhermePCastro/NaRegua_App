@@ -30,7 +30,9 @@
         android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" >
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        android:background="@color/white"
+        android:backgroundTint="@color/white">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -43,45 +45,77 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:backgroundTint="#D7787878"
                 android:ems="10"
                 android:hint="Nome da Barbearia"
                 android:inputType="textPersonName"
-                android:minHeight="48dp" />
+                android:minHeight="48dp"
+                android:selectAllOnFocus="false"
+                android:shadowColor="@color/preto1"
+                android:textColor="@color/black"
+                android:textColorHighlight="@color/preto1"
+                android:textColorHint="@color/preto1"
+                android:textColorLink="@color/preto1" />
 
             <EditText
                 android:id="@+id/edtBairro"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:backgroundTint="#D7787878"
                 android:ems="10"
                 android:hint="Bairro"
                 android:inputType="textPersonName"
-                android:minHeight="48dp" />
+                android:minHeight="48dp"
+                android:shadowColor="@color/preto1"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHighlight="@color/preto1"
+                android:textColorHint="@color/preto1"
+                android:textColorLink="@color/preto1" />
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
 
                 <EditText
                     android:id="@+id/edtCidade"
-                    android:layout_width="287dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:ems="10"
-                    android:hint="Cidade"
-                    android:inputType="textPersonName"
-                    android:minHeight="48dp" />
-
-                <EditText
-                    android:id="@+id/edtUF"
-                    android:layout_width="wrap_content"
+                    android:layout_width="280dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:layout_weight="1"
+                    android:backgroundTint="#D7787878"
+                    android:ems="10"
+                    android:hint="Cidade"
+                    android:inputType="textPersonName"
+                    android:minHeight="48dp"
+                    android:shadowColor="@color/preto1"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textColorHighlight="@color/preto1"
+                    android:textColorHint="@color/preto1"
+                    android:textColorLink="@color/preto1" />
+
+                <EditText
+                    android:id="@+id/edtUF"
+                    android:layout_width="66dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#D7787878"
+                    android:backgroundTintMode="src_in"
                     android:ems="10"
                     android:hint="UF"
                     android:inputType="textPersonName"
-                    android:minHeight="48dp" />
+                    android:maxLength="2"
+                    android:minHeight="48dp"
+                    android:shadowColor="@color/preto1"
+                    android:singleLine="true"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textColorHighlight="@color/preto1"
+                    android:textColorHint="@color/preto1"
+                    android:textColorLink="@color/preto1" />
 
             </LinearLayout>
 
