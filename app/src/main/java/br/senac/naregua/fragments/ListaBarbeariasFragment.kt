@@ -67,12 +67,14 @@ class ListaBarbeariasFragment : Fragment() {
     override fun onResume(){
         super.onResume()
 
+        atualizaBarbearias()
+
         NOME = " "
         CIDADE = " "
         UF = " "
         BAIRRO = " "
 
-        atualizaBarbearias()
+
     }
 
     fun atualizaBarbearias(){
@@ -84,7 +86,14 @@ class ListaBarbeariasFragment : Fragment() {
                 if(response.isSuccessful){
                     val barbearias = response.body()
                     atualizarUI(barbearias)
-                    CarregaOff()
+
+
+                    if (barbearias != null) {
+                        if(barbearias.size == binding.containerLista.childCount){
+                            CarregaOff()
+                        }
+                    }
+
                 }else{
                     msg(binding.containerLista,"Não é possível atualizar as barbearias")
                     Log.e("ERROR", response.errorBody().toString())
@@ -107,6 +116,14 @@ class ListaBarbeariasFragment : Fragment() {
     fun atualizarUI(lista: List<Barbearia>?){
 
         binding.containerLista.removeAllViews()
+
+        if (lista != null) {
+            if(lista.isEmpty()){
+                CarregaOff()
+                binding.lblSemBarb.visibility = View.VISIBLE
+                binding.scrollViewLista.visibility = View.INVISIBLE
+            }
+        }
 
         lista?.forEach {
 

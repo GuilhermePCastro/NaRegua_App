@@ -96,8 +96,25 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
-                android:orientation="vertical" />
+                android:orientation="vertical" >
+
+            </LinearLayout>
         </ScrollView>
+
+        <TextView
+            android:id="@+id/lblSemBarb"
+            android:layout_width="match_parent"
+            android:layout_height="103dp"
+            android:layout_marginTop="40dp"
+            android:text="Sem barbearias no momento :("
+            android:textAlignment="center"
+            android:textColor="#9C9C9C"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/scrollViewLista"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/shimmer" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

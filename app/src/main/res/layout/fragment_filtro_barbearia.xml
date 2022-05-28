@@ -54,7 +54,7 @@
                 android:shadowColor="@color/preto1"
                 android:textColor="@color/black"
                 android:textColorHighlight="@color/preto1"
-                android:textColorHint="@color/preto1"
+                android:textColorHint="#555555"
                 android:textColorLink="@color/preto1" />
 
             <EditText
@@ -71,7 +71,7 @@
                 android:singleLine="true"
                 android:textColor="@color/black"
                 android:textColorHighlight="@color/preto1"
-                android:textColorHint="@color/preto1"
+                android:textColorHint="#555555"
                 android:textColorLink="@color/preto1" />
 
             <LinearLayout
@@ -93,7 +93,7 @@
                     android:singleLine="true"
                     android:textColor="@color/black"
                     android:textColorHighlight="@color/preto1"
-                    android:textColorHint="@color/preto1"
+                    android:textColorHint="#555555"
                     android:textColorLink="@color/preto1" />
 
                 <EditText
@@ -114,7 +114,7 @@
                     android:textAllCaps="true"
                     android:textColor="@color/black"
                     android:textColorHighlight="@color/preto1"
-                    android:textColorHint="@color/preto1"
+                    android:textColorHint="#555555"
                     android:textColorLink="@color/preto1" />
 
             </LinearLayout>
